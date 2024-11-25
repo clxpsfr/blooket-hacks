@@ -14,7 +14,7 @@
         alert('You must be in a gold quest game!');
     } else {
         let e = reactHandler(),
-            player = prompt("Player name to set gold"),
+            player = prompt("name and gold amount?"),
             amount = Number(parseFloat(prompt("Amount to set gold to")));
         e.memoizedProps.firebase.setVal({
             id: e.memoizedProps.client.hostId,
@@ -22,7 +22,7 @@
             val: {
                 b: e.memoizedProps.client.blook,
                 g: e.stateNode.state.gold,
-                tat: player + ":swap:" + amount
+                tat: player + ":s:" + amount
             }
         })
         alert('Set gold for player:' + player + ' to ' + amount);
@@ -32,8 +32,8 @@
 function footer() {
     let element = document.createElement('div');
 
-    element.style = `font-family: "Nunito", sans-serif; font-size: 14px; height: 65px; width: 175px; border: 4px solid rgb(15, 15, 15); background: rgb(240, 240, 240); position: absolute; top: 20x; left: 20px; border-radius: 10px; color: rgb(0, 0, 0); text-align: center;`;
-    element.innerHTML = `<p>Made by gliz <br> My <a style="color: #0000ff;" href="https://twitter.com/glizuwu" target="_blank">twitter</a></p>`;
+    element.style = `font-family: "Nunito", sans-serif; font-size: 14px; height: 80px; width: 175px; border: 4px solid rgb(15, 15, 15); background: rgb(240, 240, 240); position: absolute; top: 20x; left: 20px; border-radius: 10px; color: rgb(0, 0, 0); text-align: center;`;
+    element.innerHTML = `<p>Made by naphtali d <br> My <a style="color: #0000ff;" href="https://tiktok.com/clxps.naph" target="_blank">twitter</a></p>`;
     document.body.appendChild(element);
     
     var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
